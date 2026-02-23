@@ -1,0 +1,9 @@
+# REFERENCES
+
+## DOM Events
+
+(DOM)[https://developer.mozilla.org/en-US/docs/Web/API/Event]
+
+## Javascript
+
+(JS)[https://developer.mozilla.org/pt-BR/docs/Web/JavaScript]

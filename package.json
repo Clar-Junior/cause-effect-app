@@ -1,0 +1,24 @@
+{
+  "name": "cause-effect-app",
+  "version": "1.0.0",
+  "description": "**Tier:** 1-Beginner",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clar-Junior/cause-effect-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Clar-Junior/cause-effect-app/issues"
+  },
+  "homepage": "https://github.com/Clar-Junior/cause-effect-app#readme"
+}
