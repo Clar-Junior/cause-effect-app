@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #839D9A;
+    color: #080808;
+}
+#app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+}
+#left_panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #646F4B;
+}
+#left_panel h1 {
+    font-size: 2.5rem;
+}
+#left_panel p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+
+/* Person Card Styles */
+.person-card {
+  border: 1px solid #46351D;
+  padding: 30px 15px;
+  margin: 0px;
+  border-radius: 5px;
+  background-color: #BFD2BF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.person-card:hover {
+  background-color: #839D9A;
+}
+.person-card:hover > h3 {
+  color: #46351D;
+}
+.person-card h3 {
+  font-size: 1.2rem;
+}
+
+/* Right Panel Styles */
+#right_panel {    
+    gap: 20px;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.person-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.2rem;
+    margin: 5px 0;
+    
+}
+#right_panel:hover {
+    background-color: #46351D;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#name, #street, #phone, #birthday {
+    
+}
