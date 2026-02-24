@@ -24,3 +24,4 @@ const people = [
   {name: "Renata Machado", street: "Rua Azul, 232", city: "Palmas", state: "TO", country: "Brasil", telephone: "+55 63 99876-1234", birthday: "1993-12-11"},
   {name: "André Fonseca", street: "Av. Amarela, 343", city: "Porto Velho", state: "RO", country: "Brasil", telephone: "+55 69 98765-4321", birthday: "1989-01-26"}
 ];
+export default people;
