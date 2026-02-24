@@ -36,24 +36,43 @@ body {
 .person-card {
     border: 1px solid #46351d;
     padding: 10px;
-    margin: 0px;
     border-radius: 5px;
-    background-color: #bfd2bf;
+    background-color: #bfd2bf; /* Cor padrão */
+    color: #080808;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.person-card:hover, .person-card:not(.selected):hover {
-    background-color: #46351d;
+    transition: all 0.3s ease;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    
 }
-.person-card:hover > h3 {
+/* ESTADO: Hover em quem NÃO está selecionado */
+/* Muda background e cor do texto */
+.person-card:not(.selected):hover {
+    background-color: #46351d;
+}
+.person-card:not(.selected):hover h3 {
     color: #fff;
-    transition: color 0.3s ease;
 }
+
+/* ESTADO: Selecionado (Clique) */
+.person-card.selected {
+    background-color: #fff !important; /* Cor de fundo travada */
+    color: #000 !important;
+}
+
+/* ESTADO: Hover no elemento que JÁ ESTÁ selecionado */
+/* Mantém o background branco, mas muda a cor do texto */
+.person-card.selected:hover {
+    background-color: #fff !important; 
+}
+.person-card.selected:hover h3 {
+    color: #46351d; /* muda apenas a cor do texto no hover do selecionado */
+}
+
 .person-card h3 {
     font-size: 1rem;
+    pointer-events: none; /* Evita que o clique no texto bugue o target */
 }
 
 /* Right Panel Styles */

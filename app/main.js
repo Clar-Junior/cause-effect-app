@@ -52,44 +52,33 @@ leftPanel.addEventListener('click', (event) => {
   });
 
   body.addEventListener('click', (event) => {
-    // console.log(event.target);    
     const app = event.target.id === 'app';
-    if (app){
-      rightPanel.style.display = 'none';
-      return
+    if (app) {
+        // 1. Remove a classe de todos
+        const allCards = leftPanel.querySelectorAll(".person-card");
+        allCards.forEach((c) => c.classList.remove("selected"));
+
+        rightPanel.style.display = "none";
+        return;
     }    
-    
   });
 
   // se clique em person-card, destaca background e color do card
-  leftPanel.addEventListener('click', (event) => {
-    const card = event.target.closest('.person-card');
-    const cards = leftPanel.querySelectorAll(".person-card");
-    if (card) {
-      cards.forEach((c) => c.classList.remove("selected"));
-      cards.forEach(c => {
-        c.style.backgroundColor = "#bfd2bf";
-        c.style.color = "#080808";
-      });
-      console.log(cards[0].style.backgroundColor);
-      
-      // person-card é um HTML collection, assim marquei a variável selectedCard com o cards com 'selected'
-      // marquei usando a classe selected para evitar que seja necessário
-      // percorrer toda a coleção para remover o background e color do
-      // card selecionado, assim basta remover a classe selected do card selecionado
-      // e adicionar a classe selected ao card clicado, e no CSS definir o background e color
-      // para a classe selected, assim quando clicar fora de um card,
-      // basta remover a classe selected do card selecionado,
-      // sem precisar percorrer toda a coleção.
-        // muda background e color do card selecionado
-        card.classList.add("selected");
-        const selectedCard = leftPanel.querySelectorAll(".person-card.selected");
-        
-        if (selectedCard.length > 0) {
-          selectedCard.forEach((c) => {
-            c.style.backgroundColor = "#fff";
-            c.style.color = "#000";
-          });
-        }
+  leftPanel.addEventListener("click", (event) => {
+      const card = event.target.closest(".person-card");
+
+      if (card) {
+          // 1. Remove a classe de todos
+          const allCards = leftPanel.querySelectorAll(".person-card");
+          allCards.forEach((c) => c.classList.remove("selected"));
+
+          // 2. Adiciona apenas no clicado
+          card.classList.add("selected");
+
+          // O CSS agora fará o resto, através da classe "selected" e de !important
+      } else {
+          // Se clicar no painel mas fora de um card, remove a seleção
+          const allCards = leftPanel.querySelectorAll(".person-card");
+          allCards.forEach((c) => c.classList.remove("selected"));
       }
   });
